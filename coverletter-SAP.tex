@@ -1,13 +1,13 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for CV/Resume
+% Awesome CV LaTeX Template for Cover Letter
 %
 % This template has been downloaded from:
 % https://github.com/posquit0/Awesome-CV
 %
-% Author:
+% Authors:
 % Claud D. Park <posquit0.bj@gmail.com>
-% http://www.posquit0.com
+% Lars Richter <mail@ayeks.de>
 %
 % Template license:
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
@@ -52,12 +52,12 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo[rectangle,edge,right]{./examples/profile}
+\photo[circle,noedge,left]{./examples/profile}
 \name{Kiran Kumar}{Baddi}
-\position{DevOps Engineer}
-\address{Niederurseler Landstrasse 164, 60439, Frankfurt Am Main, Germany}
+\position{DevOps Engineer{\enskip\cdotp\enskip}Site Reliaility Engineer}
+\address{Niederurseler Landstrasse 164, 60439, Frankfurt am Main, Germany}
 
-\mobile{(+49) 015159056369}
+\mobile{(+49) 15159056369}
 \email{kiranbaddiops@gmail.com}
 \github{kiranbaddi}
 \linkedin{kiranbaddi}
@@ -73,33 +73,59 @@
 % \extrainfo{extra informations}
 
 
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Company Recruitment Team}
+  {SAP}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Job Application for Senior Platform Engineer}
+% How the letter is opened
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
+
+
 %-------------------------------------------------------------------------------
 \begin{document}
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[C]
+\makecvheader[R]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Kiran Kumar Baddi~~~·~~~Résumé}
-  {\thepage}
+  {Kiran Baddi~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{About Me}
+My 10+ years of experience as a DevOps, Platform, and SRE professional have equipped me with comprehensive expertise in Linux, Kubernetes, Terraform and AWS Cloud. I am a strong team player and firmly believe in collaboration and thrive in a diverse and international environment. 
+\lettersection{SAP}
+Being part of such a global giant that SAP is, would be a great honor and life changing. Moreover, the job description tells me that this is the role I would thoroughly enjoy bringing all my experience and skills into the best use and also further hone my skills.
+\lettersection{Why Me?}
+My extensive experience in working with various organizations with very international and distributed teams and my willingness to be open, Continuously learn, seek and give feedback makes me a great team player. My expertise in AWS, Kubernetes, Terraform, Helm and strong communication skills make me the right fit for this role.
+\end{cvletter}
 
 
 %-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%-------------------------------------------------------------------------------
-\input{resume/summary.tex}
-\vspace{2\baselineskip}
-\input{resume/experience.tex}
-\vspace{2\baselineskip}
-\input{resume/skills.tex}
-\vspace{2\baselineskip}
-\input{resume/education.tex}
+% Print the signature and enclosures with above letter informations
+\makeletterclosing
 
-
-%-------------------------------------------------------------------------------
 \end{document}
